@@ -1,0 +1,99 @@
+{
+    "KI": [
+        "KI",
+        "AI"
+    ],
+    "KI_Prof": [
+        {
+            "Name": "Prof. Dr. Robert Hable",
+            "Profil": [
+                "Maschinelles Lernen",
+                "Datenanalyse/Statistik"
+            ],
+            "Kabinet": "K003",
+            "Handy": "0991/3615-745",
+            "Email": "robert.hable@th-deg.de"
+        },
+        {
+            "Name": "Prof. Dr. Patrick Glauner",
+            "Profil": [
+                "Künstliche Intelligenz",
+                "Maschinelles Lernen",
+                "Bildverstehen und Sprachverarbeitung",
+                "Industrie 4.0",
+                "Quantencomputing",
+                "Innovationsmanagment"
+            ],
+            "Kabinet": "K205",
+            "Handy": "0991/3615-453",
+            "Email": "patrick.glauner@th-deg.de"
+        },
+        {
+            "Name": "Prof. Dr. Josef Schneeberger",
+            "Profil": [
+                "Künstliche Intelligenz",
+                "Document Engineering"
+            ],
+            "Kabinet": "K104",
+            "Handy": "0991/3615-160",
+            "Email": "josef.schneeberger@th-deg.de"
+        },
+        {
+            "Name": "Prof. Dr. Dr. Heribert Popp, Dipl. kfm.",
+            "Profil": [
+                "Künstliche Intelligenz",
+                "Substitution von 50% der Lehre durch digitale Lehre",
+                "vhb-Beauftrager"
+            ],
+            "Kabinet": "None",
+            "Handy": "None",
+            "Email": "josef.schneeberger@th-deg.de"
+        },
+        {
+            "Name": "Bettina Wittmann",
+            "Profil": [
+                "Master Mechatronische und cyberphysische Systeme (Cham)",
+                "Bachelor Mechatronik mit Schwerpunkt Digitale Produktion (Cham)",
+                "Master Künstliche Intelligenz für smarte Sensorik / Aktorik (Cham)"
+            ],
+            "Kabinet": "TTC",
+            "Handy": "09971/99673-48",
+            "Email": "bettina.wittmann@th-deg.de"
+        },
+        {
+            "Name": "Anna Koller",
+            "Profil": [
+                "Bachelor Cyber Security",
+                "Bachelor Künstliche Intelligenz",
+                "Bachelor Wirtschaftsinformatik",
+                "Bachelor Wirtschaftsinformatik berufsbegleitend",
+                "Master Wirtschaftsinformatik"
+            ],
+            "Kabinet": "B005",
+            "Handy": "0991/3615-315",
+            "Email": "anna.koller@th-deg.de"
+        },
+        {
+            "Name": "Prof. Dr. Andreas Fischer",
+            "Profil": [
+                "Angewandte Künstliche Intelligenz",
+                "Netzwervirtualisierung (SDN & NFV)",
+                "Wiederstandsfähigkeit von Netzen",
+                "Experimentelle Algorithmik"
+            ],
+            "Kabinet": "DEGG's 2.12",
+            "Handy": "0991/3615-653",
+            "Email": "andreas.fischer@th-deg.de"
+        },
+        {
+            "Name": "Alexander Faschingbauer, M.Sc.",
+            "Profil": [
+                "Zentrum für Angewandte Forschung",
+                "Institut für angewandte Informatik - Technologie Campus Freyung"
+            ],
+            "Kabinet": "TCF",
+            "Handy": "08551/91764-22",
+            "Email": "alexander.faschingbauer@th-deg.de"
+        }
+    ]
+}
