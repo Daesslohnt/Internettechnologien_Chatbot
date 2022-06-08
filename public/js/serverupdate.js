@@ -57,7 +57,7 @@ function appendOwnMessage() {
         '<div class="msg-box"><div class="flr"><div class="messages">' +
         '<p class="msg" id="msg-1">' + $('.chat-input input').val() + '</p></div><span class="timestamp"><span class="username">' +
         name + '</span></div><img class="user-img" id="user-0"' +
-        'src="//gravatar.com/avatar/56234674574535734573000000000001?d=retro" /></div></article>'
+        'src="/media/userimg.jpg" /></div></article>'
 
     $('.chat-window').append(msg)
 }

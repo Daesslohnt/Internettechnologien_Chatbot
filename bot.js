@@ -130,7 +130,7 @@ class bot {
           inhalt += AnswersForKIProfs[j].Profil[i] + "<br> "
         }
 
-        inhalt += "Kabinet: " + AnswersForKIProfs[j].Kabinet + "<br>"
+        inhalt += "<br>Kabinet: " + AnswersForKIProfs[j].Kabinet + "<br>"
         inhalt += "Telefonnummer: " + AnswersForKIProfs[j].Handy + "<br>"
         inhalt += "Email: " + AnswersForKIProfs[j].Email
 
