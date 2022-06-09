@@ -89,7 +89,7 @@ class bot {
    * @param nachricht auf die der bot reagieren soll
   */
   post (nachricht) {
-    var name = 'Ansprechpartnersuchassistent'
+    var name = 'Megabot'
     var inhalt = "Entschuldigung hab nicht verstanden."
     const mydata = require('./public/data.json')
     const fs = require('fs')

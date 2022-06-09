@@ -22,6 +22,7 @@ socket.onmessage = function (msg) {
     switch (data.type) {
         case 'msg':
             appendOtherMessage(data)
+            
             /*
             $('<div>' + data.name + ': ' + data.msg +
                 '</div>');
@@ -38,13 +39,19 @@ socket.onmessage = function (msg) {
 };
 
 function appendOtherMessage(data) {
-    const msg = '<article class="msg-container msg-remote" id="msg-0"><div class="msg-box">' +
+    let msg
+    if (data.name.trim() === name){
+        
+    }  else {
+        msg = '<article class="msg-container msg-remote" id="msg-0"><div class="msg-box">' +
         '<img class="user-img" id="user-0" src="/media/MegaBot.jpg" />' +
         '<div class="flr"> <div class="messages"> <p class="msg" id="msg-0">' +
         data.msg +
         '</p> </div><span class="timestamp"><span class="username">' +
         data.name +
         '</span></span></div> </div> </article>'
+    }
+    
 
     $('.chat-window').append(msg);
 
