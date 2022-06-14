@@ -1,0 +1,143 @@
+{
+    "themes": [
+        {
+            "Erwaehnungen": [
+                "organisation",
+                "leitung",
+                "studienangelegenheiten",
+                "hochschulleitung",
+                "büro",
+                "steuern"
+            ],
+            "subject": [
+                {
+                    "Abteilung": "Hochschulleitung"
+                },
+                {
+                    "Abteilung": "Büro der Hochschulleitung"
+                },
+                {
+                    "Abteilung": "Kommunikation & Marketing"
+                },
+                {
+                    "Abteilung": "Referentin für Studien- und Studierendenangelegenheiten"
+                },
+                {
+                    "Abteilung": "Stabstelle steuern"
+                }
+            ]
+        },
+        {
+            "Erwaehnungen":[
+                "hochschulrat",
+                "senat",
+                "prüfungen",
+                "prüfungsausschus",
+                "gremien",
+                "zentrale gremien"
+            ],
+            "subject": [
+                {
+                    "Abteilung": "Hochschulrat"
+                },
+                {
+                    "Abteilung": "Senat"
+                },
+                {
+                    "Abteilung": "Prüfungsausschuss"
+                },
+                {
+                    "Abteilung": "Personalrat"
+                }
+            ]
+        },
+        {
+            "Erwaehnungen":[
+                "fakultät",
+                "fakultäten",
+                "studiengänge",
+                "studiengang"
+            ],
+            "subject":[
+                {
+                    "Abteilung": "Angewandte Informatik"
+                },
+                {
+                    "Abteilung": "Angewandte Naturwissenschaften und Wirtschaftsingeieurwesen"
+                },
+                {
+                    "Abteilung": "Bauingenieurwesen und Umwelttechnik"
+                },
+                {
+                    "Abteilung": "Maschienenbau und Mechatronik"
+                },
+                {
+                    "Abteilung": "Angewandte Wirtschaftswissenschaften School of Management"
+                },
+                {
+                    "Abteilung": "European Campus rottal-INN"
+                },
+                {
+                    "Abteilung": "Elektrotechnik und Medientechnik"
+                },
+                {
+                    "Abteilung": "Angewandte Gesundheitswissenschaften"
+                }
+            ]
+        },
+        {
+            "Erwaehnungen": [
+                "zentrale einrichtungen",
+                "einrichtungen",
+                "bibliothek",
+                "weiterbildung",
+                "studium",
+                "lehre"
+            ],
+            "subject":[
+                {
+                    "Abteilung": "Bibliothek"
+                },
+                {
+                    "Abteilung": "Zentrum für Angewandte Forschung"
+                },
+                {
+                    "Abteilung": "Zentrum für akademische Weiterbildung"
+                },
+                {
+                    "Abteilung": "IT - Zentrum"
+                },
+                {
+                    "Abteilung": "Zentrum Internationale Angelegenheiten"
+                },
+                {
+                    "Abteilung": "Zentrum für Studium und Lehre"
+                }
+            ]
+        },
+        {
+            "Erwaehnungen": [
+                "verwaltung",
+                "haushalt",
+                "management"
+            ],
+            "subject":[
+                {
+                    "Abteilung": "Human-resource-management"
+                },
+                {
+                    "Abteilung": "Drittmittelmanagment"
+                },
+                {
+                    "Abteilung": "Haushaltsmanagment"
+                },
+                {
+                    "Abteilung": "Rechtsangelegenheiten und Liegenschften"
+                },
+                {
+                    "Abteilung": "Facility Mannagment"
+                }
+            ]
+        }       
+    ]
+}

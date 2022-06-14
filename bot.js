@@ -90,60 +90,39 @@ class bot {
   */
   post (nachricht) {
     var name = 'Megabot'
-    var inhalt = "Entschuldigung hab nicht verstanden."
-    const mydata = require('./public/data.json')
-    const fs = require('fs')
+    var inhalt = 'Entschuldigung hab nicht verstanden.<br>Wahrscheinlich haben Sie einen Tippfehler gemacht?'
+    const mydata = require('./public/data1.json')
 
-    var AnswersForKI = mydata.KI
-    for (var j in AnswersForKI){
-      if (nachricht.includes(AnswersForKI[j])){
-        inhalt = "Hier sind alle Proffessoren aus der Fakultät KI: "
-        var msg = '{"type": "msg", "name": "' + name + '", "msg":"' + inhalt + '"}'
-        console.log('Send: ' + msg)
-        this.client.con.sendUTF(msg)
+    var nachricht = nachricht.toLowerCase()
+    var themes = mydata.themes
+    for (var i in themes){
+      let possibleNotations = themes[i].Erwaehnungen
 
-        inhalt = ""
-        for (var i in mydata.KI_Prof){
-          inhalt += mydata.KI_Prof[i].Name + "<br>"
+      for (var j in possibleNotations){
+        if (nachricht.includes(possibleNotations[j])){
+          let subjects = themes[i].subject
+
+          inhalt = 'Hier sind alle mögliche Varianten von Abteilungen:<br><br>'
+
+          for (var k in subjects){
+            inhalt += subjects[k].Abteilung + '<br>'
+          }
+
+          inhalt += "<br> Wählen Sie bitte die Abteilung."
+          break
         }
-        var msg = '{"type": "msg", "name": "' + name + '", "msg":"' + inhalt + '"}'
-        console.log('Send: ' + msg)
-        this.client.con.sendUTF(msg)
-        
-        
-        inhalt = "Über wen wollen Sie die Kontaktinformationen erhalten?"
-        var msg = '{"type": "msg", "name": "' + name + '", "msg":"' + inhalt + '"}'
-        console.log('Send: ' + msg)
-        this.client.con.sendUTF(msg)
-
-        break
       }
+
     }
-    
-    var AnswersForKIProfs = mydata.KI_Prof
-    for (var j in AnswersForKIProfs){
-      if (nachricht.includes(AnswersForKIProfs[j].Name)){
-        inhalt = AnswersForKIProfs[j].Name + "<br>"
-
-        inhalt += "Profil: <br>"
-        for (var i in AnswersForKIProfs[j].Profil){
-          inhalt += AnswersForKIProfs[j].Profil[i] + "<br> "
-        }
-
-        inhalt += "<br>Kabinet: " + AnswersForKIProfs[j].Kabinet + "<br>"
-        inhalt += "Telefonnummer: " + AnswersForKIProfs[j].Handy + "<br>"
-        inhalt += "Email: " + AnswersForKIProfs[j].Email
 
 
-        var msg = '{"type": "msg", "name": "' + name + '", "msg":"' + inhalt + '"}'
-        console.log('Send: ' + msg)
-        this.client.con.sendUTF(msg)
-        break
-      }
-    }
-    
+    var msg = '{"type": "msg", "name": "' + name + '", "msg":"' + inhalt + '"}'
+    console.log('Send: ' + msg)
+    this.client.con.sendUTF(msg)
   }
 
 }
+
+
 
 module.exports = bot

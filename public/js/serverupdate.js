@@ -54,7 +54,7 @@ function appendOtherMessage(data) {
     
 
     $('.chat-window').append(msg);
-
+    document.querySelector(".msg-container:last-of-type").scrollIntoView({behavior: "smooth"})
 
 }
 

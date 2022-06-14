@@ -1,11 +1,12 @@
 {
-    "KI": [
+    "Feacher": [
         "KI",
-        "AI"
+        "CY"
     ],
-    "KI_Prof": [
+    "Ansprechpartnern": [
         {
             "Name": "Prof. Dr. Robert Hable",
+            "Fach": ["KI"],
             "Profil": [
                 "Maschinelles Lernen",
                 "Datenanalyse/Statistik"
@@ -16,6 +17,7 @@
         },
         {
             "Name": "Prof. Dr. Patrick Glauner",
+            "Fach": ["KI"],
             "Profil": [
                 "Künstliche Intelligenz",
                 "Maschinelles Lernen",
@@ -30,6 +32,7 @@
         },
         {
             "Name": "Prof. Dr. Josef Schneeberger",
+            "Fach": ["KI"],
             "Profil": [
                 "Künstliche Intelligenz",
                 "Document Engineering"
@@ -40,6 +43,7 @@
         },
         {
             "Name": "Prof. Dr. Dr. Heribert Popp, Dipl. kfm.",
+            "Fach": ["KI"],
             "Profil": [
                 "Künstliche Intelligenz",
                 "Substitution von 50% der Lehre durch digitale Lehre",
@@ -51,6 +55,7 @@
         },
         {
             "Name": "Bettina Wittmann",
+            "Fach": ["KI"],
             "Profil": [
                 "Master Mechatronische und cyberphysische Systeme (Cham)",
                 "Bachelor Mechatronik mit Schwerpunkt Digitale Produktion (Cham)",
@@ -62,6 +67,7 @@
         },
         {
             "Name": "Anna Koller",
+            "Fach": ["KI","CY"],
             "Profil": [
                 "Bachelor Cyber Security",
                 "Bachelor Künstliche Intelligenz",
@@ -75,6 +81,7 @@
         },
         {
             "Name": "Prof. Dr. Andreas Fischer",
+            "Fach": ["KI"],
             "Profil": [
                 "Angewandte Künstliche Intelligenz",
                 "Netzwervirtualisierung (SDN & NFV)",
@@ -87,6 +94,7 @@
         },
         {
             "Name": "Alexander Faschingbauer, M.Sc.",
+            "Fach": ["KI"],
             "Profil": [
                 "Zentrum für Angewandte Forschung",
                 "Institut für angewandte Informatik - Technologie Campus Freyung"
@@ -94,6 +102,120 @@
             "Kabinet": "TCF",
             "Handy": "08551/91764-22",
             "Email": "alexander.faschingbauer@th-deg.de"
+        },
+        {
+            "Name": "Prof. Dr.-Ing. Peter Fröhlich",
+            "Fach": ["CY"],
+            "Profil": [
+                "Innovationsmanagment",
+                "Elektrotechnik",
+                "Elektrische Antriebe",
+                "Embedded Systems",
+                "Cyber Security für Industrie",
+                "Kritische Infrastrukturen"
+            ],
+            "Kabinet": "C207",
+            "Handy": "0991/3615-300",
+            "Email": "peter.froehlich@th-deg.de"
+        },
+        {
+            "Name": "Peter Apfelbeck, MBA",
+            "Fach": ["CY"],
+            "Profil": [
+                "Betriebliches Managment",
+                "Sicherheitsmanagment",
+                "Data Science",
+                "Gesundheitsinformatik",
+                "Cyber Security"
+            ],
+            "Kabinet": "ITC2 0.21",
+            "Handy": "0991/3615-425",
+            "Email": "peter.apfelbeck@th-deg.de"
+        },
+        {
+            "Name": "Michael Heigl, Dr.",
+            "Fach": ["CY"],
+            "Profil": [
+                "Forschungsprojekt MLPaSSAD",
+                "INtrusion Detection & Reaction",
+                "Embedded Security",
+                "Penetration Testing",
+                "Cyber Security"
+            ],
+            "Kabinet": "ITC2+ 1.07",
+            "Handy": "0991/3615-537",
+            "Email": "michael.heigl@th-deg.de"
+        },
+        {
+            "Name": "Martina Fischer",
+            "Fach": ["CY"],
+            "Profil": [
+                "Zentrum für Akademie Weiterbildung",
+                "Seminarmanagment - Wirtschaft & Technik"
+            ],
+            "Kabinet": "ITC2 0.22",
+            "Handy": "0991/3615-8275",
+            "Email": "martina.fischer@th-deg.de"
+        },
+        {
+            "Name": "Prof. Dr. Martin Schramm",
+            "Fach": ["CY"],
+            "Profil": [
+                "Wissenschaftlicher Leiter Institut ProjectIT",
+                "Studienkoordinator CY",
+                "Prüfungskommission Weiterbildungszentrum"
+            ],
+            "Kabinet": "ITC2+ 1.04",
+            "Handy": "0991/3615-578",
+            "Email": "martin.schramm@th-deg.de"
+        },
+        {
+            "Name": "Prof. Dr. Martin Schramm",
+            "Fach": ["CY"],
+            "Profil": [
+                "Wissenschaftlicher Leiter Institut ProjectIT",
+                "Studienkoordinator CY",
+                "Prüfungskommission Weiterbildungszentrum"
+            ],
+            "Kabinet": "ITC2+ 1.04",
+            "Handy": "0991/3615-578",
+            "Email": "martin.schramm@th-deg.de"
+        },
+        {
+            "Name": "Prof. Dr.-Ing. Andreas Grzemba",
+            "Fach": ["CY"],
+            "Profil": [
+                "Studiengangleiter Weiterbildungsmaster Cyber Security"
+            ],
+            "Kabinet": "E207",
+            "Handy": "0991/3615-512",
+            "Email": "a.grzemba@th-deg.de"
+        },
+        {
+            "Name": "Prof. Dr. Andreas Berl",
+            "Fach": ["CY", "KI"],
+            "Profil": [
+                "Studiengangskoordinator des Masterstudiengangs Artificial Intelligence and Data Science",
+                "Prüfungskommission Angewandte Informatik, Interaktive Systeme, Cyber Security, Life Science Informatics",
+                "Fakultätsrat Angewandte Informatik"
+            ],
+            "Kabinet": "ITC2 2.43",
+            "Handy": "0991/3615-530",
+            "Email": "andreas.berl@th-deg.de"
+        },
+        {
+            "Name": "Amar Almaini, M.Sc.",
+            "Fach": ["CY"],
+            "Profil": [
+                "Forschungsprojekt SISSeC",
+                "Software Defined Networking",
+                "Machine Learning",
+                "Intrution Prevention Systems",
+                "Digitaltechnik"
+            ],
+            "Kabinet": "ITC2+ 1.08",
+            "Handy": "0991/3615-531",
+            "Email": "amar.almaini@th-deg.de"
         }
     ]
 }
