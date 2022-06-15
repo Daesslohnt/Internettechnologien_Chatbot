@@ -211,6 +211,81 @@ class bot {
       this.client.con.sendUTF(msg)
       return
     }
+
+
+
+    if (this.level == 6){
+      let possiblePositiveAnswers = ["ja", "natürlich", "gut", "profession"]
+      let possibleNegativeAnswers = ["nein", "nö", "ne", "algemein"]
+      let organisations = mydata.themes[0].subject
+
+      for (var PAI in possiblePositiveAnswers){
+        if (nachricht.includes(possiblePositiveAnswers[PAI])){
+          this.level = 0
+          inhalt = 'Hier sind die Abteilungen, die Ihnen helfen können:<br><br>'
+          for (var AI in organisations){
+            inhalt += organisations[AI].Abteilung + '<br>' + organisations[AI].Link + '<br>'
+          }
+
+          inhalt += '<br>Wollen sie weiter unter Fakultäten suchen?'
+          break
+        }
+      }
+
+      for (var NAI in possibleNegativeAnswers){
+        if (nachricht.includes(possibleNegativeAnswers[NAI])){
+          this.level = 8
+          inhalt = 'Bezieht sich Ihre Frage auf<br>'
+        inhalt += '-Zentralen Gremien<br>'+
+        '-Zentralen Einrichtungen<br>' + '-Verwaltung'
+        }
+      }
+
+      var msg = '{"type": "msg", "name": "' + name + '", "msg":"' + inhalt + '"}'
+      console.log('Send: ' + msg)
+      this.client.con.sendUTF(msg)
+      return
+    }
+
+
+    if (this.level == 8){
+      if(nachricht.includes("verwaltung")){
+        this.level = 0
+        let abteilungen = mydata.themes[4].subject
+        inhalt = 'Hier sind die mögliche Abteilunge von der Verwaltung<br><br>'
+
+        for (var AI in abteilungen){
+          inhalt += abteilungen[AI].Abteilung + '<br>'
+        }
+      }
+      if (nachricht.includes("einrichtung")){
+        this.level = 0
+        let abteilungen = mydata.themes[3].subject
+        inhalt = 'Hier sind die mögliche Abteilunge von der Einrichtungen<br><br>'
+
+        for (var AI in abteilungen){
+          inhalt += abteilungen[AI].Abteilung + '<br>'
+        }
+      }  
+      if (nachricht.includes("gremien")){
+        this.level = 0
+        let abteilungen = mydata.themes[3].subject
+        inhalt = 'Hier sind die mögliche Abteilunge von der Verwaltung<br><br>'
+
+        for (var AI in abteilungen){
+          inhalt += abteilungen[AI].Abteilung + '<br>'
+        }  
+      }
+      inhalt += '<br><br>Wollen sie weiter unter Fakultäten suchen?'
+
+      var msg = '{"type": "msg", "name": "' + name + '", "msg":"' + inhalt + '"}'
+      console.log('Send: ' + msg)
+      this.client.con.sendUTF(msg)
+      return
+    }
+
+
+  
   }
 
 }
