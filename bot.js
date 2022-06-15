@@ -14,7 +14,7 @@ class bot {
    */
   constructor () {
 
-      
+    this.level = 0
 
     /** Die Websocketverbindung
       */
@@ -92,33 +92,125 @@ class bot {
     var name = 'Megabot'
     var inhalt = 'Entschuldigung hab nicht verstanden.<br>Wahrscheinlich haben Sie einen Tippfehler gemacht?'
     const mydata = require('./public/data1.json')
+    const db = require('./public/database.json')
 
     var nachricht = nachricht.toLowerCase()
-    var themes = mydata.themes
-    for (var i in themes){
-      let possibleNotations = themes[i].Erwaehnungen
 
-      for (var j in possibleNotations){
-        if (nachricht.includes(possibleNotations[j])){
-          let subjects = themes[i].subject
 
-          inhalt = 'Hier sind alle mögliche Varianten von Abteilungen:<br><br>'
+    if (this.level == 0){
+      let possiblePositiveAnswers = ["ja", "natürlich", "gut", "profession"]
+      let possibleNegativeAnswers = ["nein", "nö", "ne", "algemein"]
 
-          for (var k in subjects){
-            inhalt += subjects[k].Abteilung + '<br>'
+      for (var PAI in possiblePositiveAnswers){
+        if (nachricht.includes(possiblePositiveAnswers[PAI])){
+          this.level = 1
+          inhalt = 'Für welches Thema interessieren Sie sich?'
+          break
+        }
+      }
+      for (var NAI in possibleNegativeAnswers){
+        if (nachricht.includes(possibleNegativeAnswers[NAI])){
+          this.level = 6
+          inhalt = "Haben Sie eine Frage zur Organisation?"
+          break
+        }
+      }
+      var msg = '{"type": "msg", "name": "' + name + '", "msg":"' + inhalt + '"}'
+      console.log('Send: ' + msg)
+      this.client.con.sendUTF(msg)
+      return
+    }
+    
+
+
+    if (this.level == 1){
+      let faculties = mydata.themes[2].subject
+      for (var FI in faculties){
+        for (var AI in faculties[FI].Assoziationen){
+          if (nachricht.includes(faculties[FI].Assoziationen[AI])){
+            this.level = 2
+            inhalt = 'Wahrscheinlich kann jemand aus dem Fakultät ' + faculties[FI].Abteilung
+            inhalt += ' Ihnen helfen?'
+            break
           }
+        }
+      }
+      var msg = '{"type": "msg", "name": "' + name + '", "msg":"' + inhalt + '"}'
+      console.log('Send: ' + msg)
+      this.client.con.sendUTF(msg)
+      return
+    }
 
-          inhalt += "<br> Wählen Sie bitte die Abteilung."
+
+    if (this.level == 2){
+      let possiblePositiveAnswers = ["ja", "natürlich", "gut", "profession"]
+      let possibleNegativeAnswers = ["nein", "nö", "ne", "algemein"]
+      let isPositiv = false
+
+      for (var PAI in possiblePositiveAnswers){
+        if (nachricht.includes(possiblePositiveAnswers[PAI])){
+          this.level = 3
+          inhalt = 'Könnten Sie das präzesieren?'
           break
         }
       }
 
+
+      for (var NAI in possibleNegativeAnswers){
+        if (nachricht.includes(possibleNegativeAnswers[NAI])){
+          this.level = 0
+          inhalt = "Dann... Hier sind alle Fakultäte, die wir haben.<br><br>"
+
+          let faculties = mydata.themes[2].subject
+          for (var FI in faculties){
+            inhalt += faculties[FI].Abteilung + '<br>'
+          }
+          inhalt += mydata.themes[2].source
+        
+          inhalt +='<br></br> Versuchen wir vom Anfang an<br>'
+          inhalt += 'Möchten Sie unter Fakultäten suchen?'
+          break
+        }
+      }
+      
+    
+      var msg = '{"type": "msg", "name": "' + name + '", "msg":"' + inhalt + '"}'
+      console.log('Send: ' + msg)
+      this.client.con.sendUTF(msg)
+      return
     }
 
+    if (this.level == 3){
+      var persons = db.Ansprechpartnern
+      this.level = 0
+      let hasFound = false
 
-    var msg = '{"type": "msg", "name": "' + name + '", "msg":"' + inhalt + '"}'
-    console.log('Send: ' + msg)
-    this.client.con.sendUTF(msg)
+      inhalt = 'Das sind mögliche Ansprechpartnern<br><br>'
+      for (var PI in persons){
+        for (var PrI in persons[PI].Profil){
+          if (nachricht.includes(persons[PI].Profil[PrI].toLowerCase())){
+            inhalt += persons[PI].Name + '<br>'
+            hasFound = true
+          }
+        }
+      }
+      
+
+      if (!hasFound){
+        inhalt = 'Leider verstehe ich nicht<br><br>'
+        inhalt += 'Hier sind alle mögliche Ansprechpartenrn, über die ich weiß<br>'
+        for (var PI in persons){
+          inhalt += persons[PI].Name + '<br>'
+        }
+      }
+
+
+      inhalt += "<br> Wollen Sie weiter unter Fakultäten suchen?"
+      var msg = '{"type": "msg", "name": "' + name + '", "msg":"' + inhalt + '"}'
+      console.log('Send: ' + msg)
+      this.client.con.sendUTF(msg)
+      return
+    }
   }
 
 }

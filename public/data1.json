@@ -3,26 +3,30 @@
         {
             "Erwaehnungen": [
                 "organisation",
-                "leitung",
                 "studienangelegenheiten",
-                "hochschulleitung",
                 "büro",
                 "steuern"
             ],
+            "Name": "Organisationen",
             "subject": [
                 {
+                    "Link": "https://www.th-deg.de/de/hochschule/kontakt/hochschulleitung",
                     "Abteilung": "Hochschulleitung"
                 },
                 {
+                    "Link": "https://www.th-deg.de/de/hochschule/kontakt/buero-der-hochschulleitung",
                     "Abteilung": "Büro der Hochschulleitung"
                 },
                 {
+                    "Link": "https://www.th-deg.de/de/hochschule/kontakt/kommunikation-und-marketing",
                     "Abteilung": "Kommunikation & Marketing"
                 },
                 {
+                    "Link": "https://www.th-deg.de/de/hochschule/kontakt/referentin-studien-und-studierendenangelegenheiten",
                     "Abteilung": "Referentin für Studien- und Studierendenangelegenheiten"
                 },
                 {
+                    "Link": "https://www.th-deg.de/de/hochschule/kontakt/stabsstelle-steuern",
                     "Abteilung": "Stabstelle steuern"
                 }
             ]
@@ -36,17 +40,22 @@
                 "gremien",
                 "zentrale gremien"
             ],
+            "Name": "Zentrale Gremien",
             "subject": [
                 {
+                    "Link": "https://www.th-deg.de/de/hochschule/kontakt/hochschulrat",
                     "Abteilung": "Hochschulrat"
                 },
                 {
+                    "Link": "https://www.th-deg.de/de/hochschule/kontakt/senat",
                     "Abteilung": "Senat"
                 },
                 {
+                    "Link": "https://www.th-deg.de/de/hochschule/kontakt/pruefungsausschuss",
                     "Abteilung": "Prüfungsausschuss"
                 },
                 {
+                    "Link": "https://www.th-deg.de/de/hochschule/kontakt/pruefungsausschuss",
                     "Abteilung": "Personalrat"
                 }
             ]
@@ -58,29 +67,87 @@
                 "studiengänge",
                 "studiengang"
             ],
+            "Name": "Fakultäten",
+            "source": "https://www.th-deg.de/de/hochschule/kontakt",
             "subject":[
                 {
+                    "Assoziationen": [
+                        "nformatik",
+                        "programming",
+                        "programmieren",
+                        "embeded",
+                        "eingebetet",
+                        "ki",
+                        "cy",
+                        "wi"
+                    ],
+                    "Link": "https://www.th-deg.de/de/hochschule/kontakt/fakultaet-ai",
                     "Abteilung": "Angewandte Informatik"
                 },
                 {
+                    "Assoziationen": [
+                        "physik",
+                        "chemie",
+                        "naturwissenschaft",
+                        "wissenschaft",
+                        "wirtschaftsingenieurwesen",
+                        "ingenieur"
+                    ],
+                    "Link": "https://www.th-deg.de/de/hochschule/kontakt/fakultaet-nuw",
                     "Abteilung": "Angewandte Naturwissenschaften und Wirtschaftsingeieurwesen"
                 },
                 {
+                    "Assoziationen": [
+                        "bauingenieurwesen",
+                        "umwelttechnik",
+                        "umwelt"
+                    ],
+                    "Link": "https://www.th-deg.de/de/hochschule/kontakt/fakultaet-biw",
                     "Abteilung": "Bauingenieurwesen und Umwelttechnik"
                 },
                 {
+                    "Assoziationen": [
+                        "maschienenbau",
+                        "mechatronik"
+                    ],
+                    "Link": "https://www.th-deg.de/de/hochschule/kontakt/fakultaet-mbmk",
                     "Abteilung": "Maschienenbau und Mechatronik"
                 },
                 {
+                    "Assoziationen": [
+                        "wirtschaftswissenschaft",
+                        "managment",
+                        "ökonomie",
+                        "wirtschaft"
+                    ],
+                    "Link": "https://www.th-deg.de/de/hochschule/kontakt/fakultaet-aww",
                     "Abteilung": "Angewandte Wirtschaftswissenschaften School of Management"
                 },
                 {
+                    "Assoziationen": [
+                        "european campus",
+                        "rottal"
+                    ],
+                    "Link": "https://www.th-deg.de/de/hochschule/kontakt/fakultaet-ecri",
                     "Abteilung": "European Campus rottal-INN"
                 },
                 {
+                    "Assoziationen": [
+                        "elektrotechnik",
+                        "medientechnik",
+                        "regelungstechnik",
+                        "elektr"
+                    ],
+                    "Link": "https://www.th-deg.de/de/hochschule/kontakt/fakultaet-emt",
                     "Abteilung": "Elektrotechnik und Medientechnik"
                 },
                 {
+                    "Assoziationen": [
+                        "gesundheit",
+                        "medizin",
+                        "gesundheitswissenschaften"
+                    ],
+                    "Link": "https://www.th-deg.de/de/hochschule/kontakt/fakultaet-agw",
                     "Abteilung": "Angewandte Gesundheitswissenschaften"
                 }
             ]
@@ -94,23 +161,30 @@
                 "studium",
                 "lehre"
             ],
+            "Name": "Zentralen Einrichtungen",
             "subject":[
                 {
+                    "Link": "https://www.th-deg.de/de/hochschule/kontakt/bibliothek",
                     "Abteilung": "Bibliothek"
                 },
                 {
+                    "Link": "https://www.th-deg.de/de/hochschule/kontakt/zentrum-fuer-angewandte-forschung",
                     "Abteilung": "Zentrum für Angewandte Forschung"
                 },
                 {
+                    "Link": "https://www.th-deg.de/de/hochschule/kontakt/zentrum-fuer-akademische-weiterbildung",
                     "Abteilung": "Zentrum für akademische Weiterbildung"
                 },
                 {
+                    "Link": "https://www.th-deg.de/de/hochschule/kontakt/it-zentrum",
                     "Abteilung": "IT - Zentrum"
                 },
                 {
+                    "Link": "https://www.th-deg.de/de/hochschule/kontakt/zentrum-fuer-internationale-angelegenheiten",
                     "Abteilung": "Zentrum Internationale Angelegenheiten"
                 },
                 {
+                    "Link": "https://www.th-deg.de/de/hochschule/kontakt/zentrum-studium-lehre",
                     "Abteilung": "Zentrum für Studium und Lehre"
                 }
             ]
@@ -121,6 +195,7 @@
                 "haushalt",
                 "management"
             ],
+            "Name": "Verwaltung",
             "subject":[
                 {
                     "Abteilung": "Human-resource-management"
@@ -135,7 +210,7 @@
                     "Abteilung": "Rechtsangelegenheiten und Liegenschften"
                 },
                 {
-                    "Abteilung": "Facility Mannagment"
+                    "Abteilung": "Facility Managment"
                 }
             ]
         }       
