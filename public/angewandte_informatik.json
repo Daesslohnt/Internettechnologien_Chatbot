@@ -1,0 +1,113 @@
+{
+    "ansprechpartenrn":{
+        "Professoren":[
+            {
+                "name": "Prof. Dr.-Ing. Udo Garmann",
+                "status": "Dekan",
+                "kabinet": "K102",
+                "tnummer": "0991/3615-541"
+            },
+            {
+                "name": "Prof. Dr.-Ing. Gökçe Aydos",
+                "status": "Professor",
+                "kabinet": "DEGG's 2.16",
+                "tnummer": "0991/3615-179"
+            },
+            {
+                "name": "Prof. Dr. Marcus Barkowsky",
+                "status": "Professor",
+                "kabinet": "J 203",
+                "tnummer": "0991/3615-409"
+            },
+            {
+                "name": "Prof. Dr. Christina Bauer",
+                "status": "Professor",
+                "kabinet": "K 003",
+                "tnummer": "0991/3615-307"
+            },
+            {
+                "name": "Prof. Dr.-Ing. Berthold Bäuml",
+                "status": "Professor",
+                "kabinet": "BITZ",
+                "tnummer": "0991/3615-8712"
+            },
+            {
+                "name": "Prof. Dr. Andreas Berl",
+                "status": "Professor",
+                "kabinet": "ITC2 2.43",
+                "tnummer": "0991/3615-530"
+            },
+            {
+                "name": "Prof. Dr. Wolfgang Dorner, M.Sc.",
+                "status": "Professor",
+                "kabinet": "E 228",
+                "tnummer": "0991/3615-487"
+            },
+            {
+                "name": "Prof. Dr. Michael Drexl",
+                "status": "Professor",
+                "kabinet": "ITC2 2.28",
+                "tnummer": "0991/3615-587"
+            }
+        ],
+        "wissenschaftliche mitarbeitern": [
+            {
+                "name": " Amar Almaini, M.Sc.",
+                "status": "Wissenschaftlicher Mitarbeiter",
+                "kabinet": "ITC2+ 1.08",
+                "tnummer": "0991/3615-531"
+            },
+            {
+                "name": " Alexander Böckl, B.Sc., M.Sc.",
+                "status": "Wissenschaftlicher Mitarbeiter",
+                "kabinet": "ITC2 2.37 - Startup Lab",
+                "tnummer": "0991/3615-403"
+            },
+            {
+                "name": " Nicki Bodenschatz",
+                "status": "Wissenschaftlicher Mitarbeiter",
+                "kabinet": "DEGG's 2.28",
+                "tnummer": "0991/3615-716"
+            }
+        ],
+        "mitarbeitern":[
+            {
+                "name": " Andrea Groll",
+                "status": "Dekanatssekretärinr",
+                "kabinet": "K 101",
+                "tnummer": "0991/3615-676"
+            },
+            {
+                "name": " Sonja Höcherl",
+                "status": "Dekanatssekretärinr",
+                "kabinet": "K 101",
+                "tnummer": "0991/3615-332"
+            }
+        ]
+    },
+    "tabella":{
+        "ki-b-2": "https://thabella.th-deg.de/thabella/opn/pdf/page/KI-2"
+    },
+    "klausuren":{
+        "bachelor": {
+            "angewandte informatik/infotronik" : "https://www.th-deg.de/Studierende/Antraege-und-Organisatorisches/Pruefungstermine/pruefungsplan_ai-b.pdf",
+            "artificial intelligence": "https://www.th-deg.de/Studierende/Antraege-und-Organisatorisches/Pruefungstermine/pruefungsplan_ain-b.pdf",
+            "cyber security": "https://www.th-deg.de/Studierende/Antraege-und-Organisatorisches/Pruefungstermine/pruefungsplan_cy-b.pdf",
+            "interaktive systeme": "https://www.th-deg.de/Studierende/Antraege-und-Organisatorisches/Pruefungstermine/pruefungsplan_ias-b.pdf",
+            "künstliche intelligenz": "https://www.th-deg.de/Studierende/Antraege-und-Organisatorisches/Pruefungstermine/pruefungsplan_ki-b.pdf",
+            "wirtschaftsinformatik": "https://www.th-deg.de/Studierende/Antraege-und-Organisatorisches/Pruefungstermine/pruefungsplan_wi-b.pdf"
+        },
+        "master": {
+            "angewandte informatik": "https://www.th-deg.de/Studierende/Antraege-und-Organisatorisches/Pruefungstermine/pruefungsplan_ai-m.pdf",
+            "artificial intelligence and data science" : "https://www.th-deg.de/Studierende/Antraege-und-Organisatorisches/Pruefungstermine/pruefungsplan_aid-m.pdf",
+            "high performance computing and quantum computing": "https://www.th-deg.de/Studierende/Antraege-und-Organisatorisches/Pruefungstermine/pruefungsplan_hpcqc-m.pdf",
+            "life science informatik": "https://www.th-deg.de/Studierende/Antraege-und-Organisatorisches/Pruefungstermine/pruefungsplan_lsi-m.pdf",
+            "wirtschaftsinformatik": "https://www.th-deg.de/Studierende/Antraege-und-Organisatorisches/Pruefungstermine/pruefungsplan_wi-m.pdf"
+        },
+        "dual": {
+            "cyber security": "https://www.th-deg.de/Studierende/Antraege-und-Organisatorisches/Pruefungstermine/pruefungsplan_cy-m.pdf",
+            "wirtschaftsinformatik": "https://www.th-deg.de/Studierende/Antraege-und-Organisatorisches/Pruefungstermine/pruefungsplan_wi-b-bb.pdf",
+            "wirtschaftsinforamtik - data science" : "https://www.th-deg.de/Studierende/Antraege-und-Organisatorisches/Pruefungstermine/pruefungsplan_wi-b-bb-das.pdf"
+        }
+    }
+}

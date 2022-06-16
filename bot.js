@@ -15,6 +15,8 @@ class bot {
   constructor () {
 
     this.level = 0
+    this.personTyp = "none"
+    this.abschluss = "none"
 
     /** Die Websocketverbindung
       */
@@ -91,205 +93,163 @@ class bot {
   post (nachricht) {
     var name = 'Megabot'
     var inhalt = 'Entschuldigung hab nicht verstanden.<br>Wahrscheinlich haben Sie einen Tippfehler gemacht?'
-    const mydata = require('./public/data1.json')
-    const db = require('./public/database.json')
+    const mydata = require('./public/angewandte_informatik.json')
 
     var nachricht = nachricht.toLowerCase()
 
-
     if (this.level == 0){
-      let possiblePositiveAnswers = ["ja", "natürlich", "gut", "profession"]
-      let possibleNegativeAnswers = ["nein", "nö", "ne", "algemein"]
+      if (nachricht.includes("ansprechpartner")){
+        this.level = 1
+        
+        inhalt = 'Es gibt Professoren, Wissenschaftliche Mitarbeiter und Mitarbeiter' +
+        '<br>In welcher Gruppe soll ich suchen?'
+        this.sendMessage(name, inhalt)
+        return
+      }
+      if (nachricht.includes("tabella")){
+        this.level = 2
 
-      for (var PAI in possiblePositiveAnswers){
-        if (nachricht.includes(possiblePositiveAnswers[PAI])){
-          this.level = 1
-          inhalt = 'Für welches Thema interessieren Sie sich?'
-          break
-        }
+        inhalt = 'In welchem Kurs sind Sie?'
+        this.sendMessage(name, inhalt)
+        return
       }
-      for (var NAI in possibleNegativeAnswers){
-        if (nachricht.includes(possibleNegativeAnswers[NAI])){
-          this.level = 6
-          inhalt = "Haben Sie eine Frage zur Organisation?"
-          break
-        }
+      if (nachricht.includes("klausur")){
+        this.level = 3
+
+        inhalt = 'Welcher Abschluss?'
+        this.sendMessage(name, inhalt)
+        return
       }
-      var msg = '{"type": "msg", "name": "' + name + '", "msg":"' + inhalt + '"}'
-      console.log('Send: ' + msg)
-      this.client.con.sendUTF(msg)
-      return
     }
-    
 
 
     if (this.level == 1){
-      let faculties = mydata.themes[2].subject
-      for (var FI in faculties){
-        for (var AI in faculties[FI].Assoziationen){
-          if (nachricht.includes(faculties[FI].Assoziationen[AI])){
-            this.level = 2
-            inhalt = 'Wahrscheinlich kann jemand aus dem Fakultät ' + faculties[FI].Abteilung
-            inhalt += ' Ihnen helfen?'
-            break
-          }
+      if (nachricht.includes("professor")){
+        this.level = 4
+        this.personTyp = "prof"
+        
+        inhalt = 'Suchen Sie nach jemandem konkret?'
+        this.sendMessage(name, inhalt)
+        return
+      }
+    }
+
+    if (this.level == 4){
+      let persons
+      switch (this.personTyp) {
+        case "prof":
+          persons = mydata.ansprechpartenrn.Professoren
+          break;
+        case "wm":
+          persons = mydata.ansprechpartenrn['wissenschaftliche mitarbeitern']
+          break;
+        case "mta":
+          persons = mydata.ansprechpartenrn.mitarbeitern
+          break;
+        default:
+          break;
+      }
+
+      for (var pi in persons){
+        if (nachricht.includes(persons[pi].name)){
+          let p = persons[pi]
+          inhalt = p.name + '<br>' + p.status + '<br>' + p.kabinet + '<br>' + p.tnummer
+          this.sendMessage(name, inhalt)
+          this.level = 0
+          return
         }
       }
-      var msg = '{"type": "msg", "name": "' + name + '", "msg":"' + inhalt + '"}'
-      console.log('Send: ' + msg)
-      this.client.con.sendUTF(msg)
+      inhalt = 'Hier sind alle Ansperchpartenern, die ich kenne.<br>'
+      for (var pi in persons){
+        let p = persons[pi]
+        inhalt += '<br>' + p.name + '<br>' + p.status + '<br>' + p.kabinet + '<br>' + p.tnummer + '<br>'
+      } 
+      this.level = 0
+      this.sendMessage(name, inhalt)
       return
     }
 
 
     if (this.level == 2){
-      let possiblePositiveAnswers = ["ja", "natürlich", "gut", "profession"]
-      let possibleNegativeAnswers = ["nein", "nö", "ne", "algemein"]
-      let isPositiv = false
-
-      for (var PAI in possiblePositiveAnswers){
-        if (nachricht.includes(possiblePositiveAnswers[PAI])){
-          this.level = 3
-          inhalt = 'Könnten Sie das präzesieren?'
-          break
-        }
-      }
-
-
-      for (var NAI in possibleNegativeAnswers){
-        if (nachricht.includes(possibleNegativeAnswers[NAI])){
+      let kursen = mydata.tabella
+      for (var ki in kursen){
+        if (nachricht.includes(ki)){
+          inhalt = 'Hier ist der Link zur PDF Datei<br>'+ kursen[ki]
+          this.sendMessage(name, inhalt)
           this.level = 0
-          inhalt = "Dann... Hier sind alle Fakultäte, die wir haben.<br><br>"
-
-          let faculties = mydata.themes[2].subject
-          for (var FI in faculties){
-            inhalt += faculties[FI].Abteilung + '<br>'
-          }
-          inhalt += mydata.themes[2].source
-        
-          inhalt +='<br></br> Versuchen wir vom Anfang an<br>'
-          inhalt += 'Möchten Sie unter Fakultäten suchen?'
-          break
+          return
         }
       }
-      
-    
-      var msg = '{"type": "msg", "name": "' + name + '", "msg":"' + inhalt + '"}'
-      console.log('Send: ' + msg)
-      this.client.con.sendUTF(msg)
-      return
     }
+
 
     if (this.level == 3){
-      var persons = db.Ansprechpartnern
-      this.level = 0
-      let hasFound = false
-
-      inhalt = 'Das sind mögliche Ansprechpartnern<br><br>'
-      for (var PI in persons){
-        for (var PrI in persons[PI].Profil){
-          if (nachricht.includes(persons[PI].Profil[PrI].toLowerCase())){
-            inhalt += persons[PI].Name + '<br>'
-            hasFound = true
-          }
-        }
+      if (nachricht.includes("bachelor")){
+        this.abschluss = "B"
       }
+      if (nachricht.includes("master")){
+        this.abschluss = "M"
+      }
+      if (nachricht.includes("berufsbegleitend")){
+        this.abschluss = "D"
+      }
+
+      inhalt = 'Welcher Kurs?'
+      this.level = 5
+      this.sendMessage(name, inhalt)
+      return
+    }
+
+    if (this.level == 5){
+      let kursen
+      switch (this.abschluss) {
+        case "B":
+          kursen = mydata.klausuren.bachelor
+          break;
+        case "M":
+          kursen = mydata.klausuren.master
+          break;
+        case "D":
+          kursen = mydata.klausuren.dual
+          break;
+        default:
+          break;
+      }
+
       
-
-      if (!hasFound){
-        inhalt = 'Leider verstehe ich nicht<br><br>'
-        inhalt += 'Hier sind alle mögliche Ansprechpartenrn, über die ich weiß<br>'
-        for (var PI in persons){
-          inhalt += persons[PI].Name + '<br>'
-        }
-      }
-
-
-      inhalt += "<br> Wollen Sie weiter unter Fakultäten suchen?"
-      var msg = '{"type": "msg", "name": "' + name + '", "msg":"' + inhalt + '"}'
-      console.log('Send: ' + msg)
-      this.client.con.sendUTF(msg)
-      return
-    }
-
-
-
-    if (this.level == 6){
-      let possiblePositiveAnswers = ["ja", "natürlich", "gut", "profession"]
-      let possibleNegativeAnswers = ["nein", "nö", "ne", "algemein"]
-      let organisations = mydata.themes[0].subject
-
-      for (var PAI in possiblePositiveAnswers){
-        if (nachricht.includes(possiblePositiveAnswers[PAI])){
+      for (var ki in kursen){
+        if (nachricht.includes(ki)){
+          inhalt = 'Hier ist der Link zu den Prüfungsterminen: ' + ki +
+          '<br>' + kursen[ki]
+          this.sendMessage(name, inhalt)
           this.level = 0
-          inhalt = 'Hier sind die Abteilungen, die Ihnen helfen können:<br><br>'
-          for (var AI in organisations){
-            inhalt += organisations[AI].Abteilung + '<br>' + organisations[AI].Link + '<br>'
-          }
-
-          inhalt += '<br>Wollen sie weiter unter Fakultäten suchen?'
-          break
+          return
         }
       }
-
-      for (var NAI in possibleNegativeAnswers){
-        if (nachricht.includes(possibleNegativeAnswers[NAI])){
-          this.level = 8
-          inhalt = 'Bezieht sich Ihre Frage auf<br>'
-        inhalt += '-Zentralen Gremien<br>'+
-        '-Zentralen Einrichtungen<br>' + '-Verwaltung'
-        }
-      }
-
-      var msg = '{"type": "msg", "name": "' + name + '", "msg":"' + inhalt + '"}'
-      console.log('Send: ' + msg)
-      this.client.con.sendUTF(msg)
+      inhalt = 'Hier sind alle linke zu den Prüfungsteminen:<br>'
+      for (var ki in kursen){
+        inhalt += '<br>' + ki + '<br>' + kursen[ki]
+      } 
+      this.level = 0
+      this.sendMessage(name, inhalt)
       return
     }
 
 
-    if (this.level == 8){
-      if(nachricht.includes("verwaltung")){
-        this.level = 0
-        let abteilungen = mydata.themes[4].subject
-        inhalt = 'Hier sind die mögliche Abteilunge von der Verwaltung<br><br>'
-
-        for (var AI in abteilungen){
-          inhalt += abteilungen[AI].Abteilung + '<br>'
-        }
-      }
-      if (nachricht.includes("einrichtung")){
-        this.level = 0
-        let abteilungen = mydata.themes[3].subject
-        inhalt = 'Hier sind die mögliche Abteilunge von der Einrichtungen<br><br>'
-
-        for (var AI in abteilungen){
-          inhalt += abteilungen[AI].Abteilung + '<br>'
-        }
-      }  
-      if (nachricht.includes("gremien")){
-        this.level = 0
-        let abteilungen = mydata.themes[3].subject
-        inhalt = 'Hier sind die mögliche Abteilunge von der Verwaltung<br><br>'
-
-        for (var AI in abteilungen){
-          inhalt += abteilungen[AI].Abteilung + '<br>'
-        }  
-      }
-      inhalt += '<br><br>Wollen sie weiter unter Fakultäten suchen?'
-
-      var msg = '{"type": "msg", "name": "' + name + '", "msg":"' + inhalt + '"}'
-      console.log('Send: ' + msg)
-      this.client.con.sendUTF(msg)
-      return
-    }
 
 
-  
+
+
+    this.sendMessage(name, inhalt)
+  }
+
+  sendMessage(name, inhalt){
+    var msg = '{"type": "msg", "name": "' + name + '", "msg":"' + inhalt + '"}'
+    console.log('Send: ' + msg)
+    this.client.con.sendUTF(msg)
   }
 
 }
-
 
 
 module.exports = bot
