@@ -91,8 +91,9 @@ class bot {
    * @param nachricht auf die der bot reagieren soll
   */
   post (nachricht) {
+    const prep_answers = require('./public/phrases.json')
     var name = 'Megabot'
-    var inhalt = 'Entschuldigung hab nicht verstanden.<br>Wahrscheinlich haben Sie einen Tippfehler gemacht?'
+    var inhalt = prep_answers.default
     const mydata = require('./public/angewandte_informatik.json')
 
     var nachricht = nachricht.toLowerCase()
@@ -101,22 +102,21 @@ class bot {
       if (nachricht.includes("ansprechpartner")){
         this.level = 1
         
-        inhalt = 'Es gibt Professoren, Wissenschaftliche Mitarbeiter und Mitarbeiter' +
-        '<br>In welcher Gruppe soll ich suchen?'
+        inhalt = prep_answers.level0.ansprechpartner
         this.sendMessage(name, inhalt)
         return
       }
       if (nachricht.includes("tabella")){
         this.level = 2
 
-        inhalt = 'In welchem Kurs sind Sie?'
+        inhalt = prep_answers.level0.tabella
         this.sendMessage(name, inhalt)
         return
       }
       if (nachricht.includes("klausur")){
         this.level = 3
 
-        inhalt = 'Welcher Abschluss?'
+        inhalt = prep_answers.level0.klausur
         this.sendMessage(name, inhalt)
         return
       }
@@ -128,7 +128,7 @@ class bot {
         this.level = 4
         this.personTyp = "prof"
         
-        inhalt = 'Suchen Sie nach jemandem konkret?'
+        inhalt = prep_answers.level1
         this.sendMessage(name, inhalt)
         return
       }
@@ -154,17 +154,19 @@ class bot {
         if (nachricht.includes(persons[pi].name)){
           let p = persons[pi]
           inhalt = p.name + '<br>' + p.status + '<br>' + p.kabinet + '<br>' + p.tnummer
+          inhalt += prep_answers.goto0
           this.sendMessage(name, inhalt)
           this.level = 0
           return
         }
       }
-      inhalt = 'Hier sind alle Ansperchpartenern, die ich kenne.<br>'
+      inhalt = prep_answers.level4
       for (var pi in persons){
         let p = persons[pi]
         inhalt += '<br>' + p.name + '<br>' + p.status + '<br>' + p.kabinet + '<br>' + p.tnummer + '<br>'
       } 
       this.level = 0
+      inhalt += prep_answers.goto0
       this.sendMessage(name, inhalt)
       return
     }
@@ -174,7 +176,8 @@ class bot {
       let kursen = mydata.tabella
       for (var ki in kursen){
         if (nachricht.includes(ki)){
-          inhalt = 'Hier ist der Link zur PDF Datei<br>'+ kursen[ki]
+          inhalt = prep_answers.level2 + kursen[ki]
+          inhalt += prep_answers.goto0
           this.sendMessage(name, inhalt)
           this.level = 0
           return
@@ -194,7 +197,7 @@ class bot {
         this.abschluss = "D"
       }
 
-      inhalt = 'Welcher Kurs?'
+      inhalt = prep_answers.level3
       this.level = 5
       this.sendMessage(name, inhalt)
       return
@@ -219,18 +222,21 @@ class bot {
       
       for (var ki in kursen){
         if (nachricht.includes(ki)){
-          inhalt = 'Hier ist der Link zu den Prüfungsterminen: ' + ki +
+          inhalt = prep_answers.level5.gefunden + ki +
           '<br>' + kursen[ki]
+          inhalt += prep_answers.goto0
           this.sendMessage(name, inhalt)
           this.level = 0
           return
         }
       }
-      inhalt = 'Hier sind alle linke zu den Prüfungsteminen:<br>'
+      inhalt = prep_answers.level5.nicht_gefunden
       for (var ki in kursen){
         inhalt += '<br>' + ki + '<br>' + kursen[ki]
       } 
       this.level = 0
+
+      inhalt += prep_answers.goto0
       this.sendMessage(name, inhalt)
       return
     }

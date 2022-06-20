@@ -1,0 +1,17 @@
+{
+    "default": "Entschuldigung hab nicht verstanden.<br>Wahrscheinlich haben Sie einen Tippfehler gemacht?",
+    "level0":{
+        "ansprechpartner": "Es gibt Professoren, Wissenschaftliche Mitarbeiter und Mitarbeiter<br>In welcher Gruppe soll ich suchen?",
+        "tabella": "In welchem Kurs sind Sie?",
+        "klausur": "Welcher Abschluss?"
+    },
+    "level1": "Suchen Sie nach jemandem konkret?",
+    "level4": "Hier sind alle Ansperchpartenern, die ich kenne.<br>",
+    "level2": "Hier ist der Link zur PDF Datei<br>",
+    "level3": "Welcher Kurs?",
+    "level5": {
+        "gefunden": "Hier ist der Link zu den Prüfungsterminen: ",
+        "nicht_gefunden": "Hier sind alle linke zu den Prüfungsteminen:<br>"
+    },
+    "goto0": "<br><br>Möchten Sie noch einen Ansprechpartener/Tabella/KlausurTermin finden?"
+}
