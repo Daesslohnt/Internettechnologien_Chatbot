@@ -3,15 +3,18 @@
     "level0":{
         "ansprechpartner": "Es gibt Professoren, Wissenschaftliche Mitarbeiter und Mitarbeiter<br>In welcher Gruppe soll ich suchen?",
         "tabella": "In welchem Kurs sind Sie?",
-        "klausur": "Welcher Abschluss?"
+        "klausur": "Welcher Abschluss?<br>Bachelor/Master/Berufsbegleitende Studiengänge"
     },
-    "level1": "Suchen Sie nach jemandem konkret?",
-    "level4": "Hier sind alle Ansperchpartenern, die ich kenne.<br>",
-    "level2": "Hier ist der Link zur PDF Datei<br>",
-    "level3": "Welcher Kurs?",
+    "level1": "Suchen Sie nach jemandem konkret?<br>Schreben Sie den vollständigen Namen mit dem Titel.",
+    "level4": "Leider kenne ich ihn/sie nicht.<br>Hier sind alle Ansperchpartenern aus meinem Datenbank.<br>",
+    "level2":{
+        "gefunden":  "Hier ist der Link zur PDF Datei<br>",
+        "nicht_gefunden": "Verzeihung, ich kann das nicht verstehen<br>Hier sind alle mögliche Varianten:<br>"
+    },
+    "level3": "Welcher Kurs?<br>Schreiben Sie bitte den vollständigen Namen.",
     "level5": {
         "gefunden": "Hier ist der Link zu den Prüfungsterminen: ",
-        "nicht_gefunden": "Hier sind alle linke zu den Prüfungsteminen:<br>"
+        "nicht_gefunden": "Verzeihung, ich kann das nicht verstehen<br>Hier sind alle linke zu den Prüfungsteminen:<br>"
     },
     "goto0": "<br><br>Möchten Sie noch einen Ansprechpartener/Tabella/KlausurTermin finden?"
 }

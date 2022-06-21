@@ -86,28 +86,214 @@
         ]
     },
     "tabella":{
-        "ki-b-2": "https://thabella.th-deg.de/thabella/opn/pdf/page/KI-2"
+        "ai-b-1": "<a href='https://thabella.th-deg.de/thabella/opn/pdf/page/AI-1'a>Hier</a>",
+        "ai-b-2": "<a href='https://thabella.th-deg.de/thabella/opn/pdf/page/AI-2'a>Hier</a>",
+        "ai-b-3": "<a href='https://thabella.th-deg.de/thabella/opn/pdf/page/AI-3'a>Hier</a>",
+        "ai-b-4es": "<a href='https://thabella.th-deg.de/thabella/opn/pdf/page/AI-ES4'a>Hier</a>",
+        "ai-b-4mrs": "<a href='https://thabella.th-deg.de/thabella/opn/pdf/page/AI-MRS4'a>Hier</a>",
+        "ai-b-5es": "<a href='https://thabella.th-deg.de/thabella/opn/pdf/page/AI-ES5'a>Hier</a>",
+        "ai-b-5mrs": "<a href='https://thabella.th-deg.de/thabella/opn/pdf/page/AI-MRS5'a>Hier</a>",
+        "ai-b-6es": "<a href='https://thabella.th-deg.de/thabella/opn/pdf/page/AI-ES6'a>Hier</a>",
+        "ai-b-6mrs": "<a href='https://thabella.th-deg.de/thabella/opn/pdf/page/AI-MRS6'a>Hier</a>",
+        "ai-b-7es": "<a href='https://thabella.th-deg.de/thabella/opn/pdf/page/AI-ES7'a>Hier</a>",
+        "ai-b-7mrs": "<a href='https://thabella.th-deg.de/thabella/opn/pdf/page/AI-MRS7'a>Hier</a>",
+
+        "ain-b-1": "<a href='https://thabella.th-deg.de/thabella/opn/pdf/page/AIN-1'a>Hier</a>",
+        "ain-b-2": "<a href='https://thabella.th-deg.de/thabella/opn/pdf/page/AIN-2'a>Hier</a>",
+        "ain-b-3": "<a href='https://thabella.th-deg.de/thabella/opn/pdf/page/AIN-3'a>Hier</a>",
+        "ain-b-4": "<a href='https://thabella.th-deg.de/thabella/opn/pdf/page/AIN-4'a>Hier</a>",
+        "ain-b-5": "<a href='https://thabella.th-deg.de/thabella/opn/pdf/page/AIN-5'a>Hier</a>",
+        "ain-b-6": "<a href='https://thabella.th-deg.de/thabella/opn/pdf/page/AIN-6'a>Hier</a>",
+        "ain-b-7": "<a href='https://thabella.th-deg.de/thabella/opn/pdf/page/AIN-7'a>Hier</a>",
+
+        "ki-b-1": "<a href='https://thabella.th-deg.de/thabella/opn/pdf/page/KI-1'>Hier</a>",
+        "ki-b-2": "<a href='https://thabella.th-deg.de/thabella/opn/pdf/page/KI-2'>Hier</a>",
+        "ki-b-3": "<a href='https://thabella.th-deg.de/thabella/opn/pdf/page/KI-3'>Hier</a>",
+        "ki-b-4": "<a href='https://thabella.th-deg.de/thabella/opn/pdf/page/KI-4'>Hier</a>",
+        "ki-b-5": "<a href='https://thabella.th-deg.de/thabella/opn/pdf/page/KI-5'>Hier</a>",
+        "ki-b-6": "<a href='https://thabella.th-deg.de/thabella/opn/pdf/page/KI-6'>Hier</a>",
+        "ki-b-7": "<a href='https://thabella.th-deg.de/thabella/opn/pdf/page/KI-7'>Hier</a>",
+
+        "cy-b-1": "<a href='https://thabella.th-deg.de/thabella/opn/pdf/page/CY-1'>Hier</a>",
+        "cy-b-2": "<a href='https://thabella.th-deg.de/thabella/opn/pdf/page/CY-2'>Hier</a>",
+        "cy-b-3": "<a href='https://thabella.th-deg.de/thabella/opn/pdf/page/CY-3'>Hier</a>",
+        "cy-b-4": "<a href='https://thabella.th-deg.de/thabella/opn/pdf/page/CY-4'>Hier</a>",
+        "cy-b-5": "<a href='https://thabella.th-deg.de/thabella/opn/pdf/page/CY-5'>Hier</a>",
+        "cy-b-6": "<a href='https://thabella.th-deg.de/thabella/opn/pdf/page/CY-6'>Hier</a>",
+        "cy-b-7": "<a href='https://thabella.th-deg.de/thabella/opn/pdf/page/CY-7'>Hier</a>",
+
+        "ias-b-1": "<a href='https://thabella.th-deg.de/thabella/opn/pdf/page/IAS-1'>Hier</a>",
+        "ias-b-2": "<a href='https://thabella.th-deg.de/thabella/opn/pdf/page/IAS-2'>Hier</a>",
+        "ias-b-3": "<a href='https://thabella.th-deg.de/thabella/opn/pdf/page/IAS-3'>Hier</a>",
+        "ias-b-4": "<a href='https://thabella.th-deg.de/thabella/opn/pdf/page/IAS-4'>Hier</a>",
+        "ias-b-5": "<a href='https://thabella.th-deg.de/thabella/opn/pdf/page/IAS-5'>Hier</a>",
+        "ias-b-6": "<a href='https://thabella.th-deg.de/thabella/opn/pdf/page/IAS-6'>Hier</a>",
+        "ias-b-7": "<a href='https://thabella.th-deg.de/thabella/opn/pdf/page/IAS-7'>Hier</a>",
+
+        "wi-b-1": "<a href='https://thabella.th-deg.de/thabella/opn/pdf/page/WI-1'>Hier</a>",
+        "wi-b-2": "<a href='https://thabella.th-deg.de/thabella/opn/pdf/page/WI-2'>Hier</a>",
+        "wi-b-3": "<a href='https://thabella.th-deg.de/thabella/opn/pdf/page/WI-3'>Hier</a>",
+        "wi-b-4": "<a href='https://thabella.th-deg.de/thabella/opn/pdf/page/WI-4'>Hier</a>",
+        "wi-b-5": "<a href='https://thabella.th-deg.de/thabella/opn/pdf/page/WI-5'>Hier</a>",
+        "wi-b-6": "<a href='https://thabella.th-deg.de/thabella/opn/pdf/page/WI-6'>Hier</a>",
+        "wi-b-7": "<a href='https://thabella.th-deg.de/thabella/opn/pdf/page/WI-7'>Hier</a>",
+
+        "wid-bb-1": "<a href='https://thabella.th-deg.de/thabella/opn/pdf/page/WID-1'>Hier</a>",
+        "wid-bb-2": "<a href='https://thabella.th-deg.de/thabella/opn/pdf/page/WID-2'>Hier</a>",
+        "wid-bb-3": "<a href='https://thabella.th-deg.de/thabella/opn/pdf/page/WID-3'>Hier</a>",
+        "wid-bb-4": "<a href='https://thabella.th-deg.de/thabella/opn/pdf/page/WID-4'>Hier</a>",
+        "wid-bb-5": "<a href='https://thabella.th-deg.de/thabella/opn/pdf/page/WID-5'>Hier</a>",
+        "wid-bb-6": "<a href='https://thabella.th-deg.de/thabella/opn/pdf/page/WID-6'>Hier</a>",
+        "wid-bb-7": "<a href='https://thabella.th-deg.de/thabella/opn/pdf/page/WID-7'>Hier</a>",
+        "wid-bb-8": "<a href='https://thabella.th-deg.de/thabella/opn/pdf/page/WID-8'>Hier</a>",
+        "wid-bb-9": "<a href='https://thabella.th-deg.de/thabella/opn/pdf/page/WID-9'>Hier</a>",
+        "wid-bb-10": "<a href='https://thabella.th-deg.de/thabella/opn/pdf/page/WID-10'>Hier</a>",
+        "wid-bb-11": "<a href='https://thabella.th-deg.de/thabella/opn/pdf/page/WID-11'>Hier</a>",
+
+        "aid-m-1": "<a href='https://thabella.th-deg.de/thabella/opn/pdf/page/MAID-1'>Hier</a>",
+        "aid-m-2": "<a href='https://thabella.th-deg.de/thabella/opn/pdf/page/MAID-2'>Hier</a>",
+        "aid-m-3": "<a href='https://thabella.th-deg.de/thabella/opn/pdf/page/MAID-3'>Hier</a>",
+        "aid-m-4": "<a href='https://thabella.th-deg.de/thabella/opn/pdf/page/MAID-4'>Hier</a>",
+
+        "ai-m-1": "<a href='https://thabella.th-deg.de/thabella/opn/pdf/page/MAI-1'>Hier</a>",
+        "ai-m-2": "<a href='https://thabella.th-deg.de/thabella/opn/pdf/page/MAI-2'>Hier</a>",
+        "ai-m-3": "<a href='https://thabella.th-deg.de/thabella/opn/pdf/page/MAI-3'>Hier</a>",
+        "ai-m-4": "<a href='https://thabella.th-deg.de/thabella/opn/pdf/page/MAI-4'>Hier</a>",
+
+        "hpc-m-1": "<a href='https://thabella.th-deg.de/thabella/opn/pdf/page/HPC-1'>Hier</a>",
+        "hpc-m-2": "<a href='https://thabella.th-deg.de/thabella/opn/pdf/page/HPC-2'>Hier</a>",
+        "hpc-m-3": "<a href='https://thabella.th-deg.de/thabella/opn/pdf/page/HPC-3'>Hier</a>",
+        "hpc-m-4": "<a href='https://thabella.th-deg.de/thabella/opn/pdf/page/HPC-4'>Hier</a>",
+
+        "lsi-m-1": "<a href='https://thabella.th-deg.de/thabella/opn/pdf/page/LSI-1'>Hier</a>",
+        "lsi-m-2": "<a href='https://thabella.th-deg.de/thabella/opn/pdf/page/LSI-2'>Hier</a>",
+        "lsi-m-3": "<a href='https://thabella.th-deg.de/thabella/opn/pdf/page/LSI-3'>Hier</a>",
+        "lsi-m-4": "<a href='https://thabella.th-deg.de/thabella/opn/pdf/page/LSI-4'>Hier</a>",
+
+        "wi-m-1": "<a href='https://thabella.th-deg.de/thabella/opn/pdf/page/MWI-1'>Hier</a>",
+        "wi-m-2": "<a href='https://thabella.th-deg.de/thabella/opn/pdf/page/MWI-2'>Hier</a>",
+        "wi-m-3": "<a href='https://thabella.th-deg.de/thabella/opn/pdf/page/MWI-3'>Hier</a>",
+        "wi-m-4": "<a href='https://thabella.th-deg.de/thabella/opn/pdf/page/MWI-4'>Hier</a>"
     },
     "klausuren":{
-        "bachelor": {
-            "angewandte informatik/infotronik" : "https://www.th-deg.de/Studierende/Antraege-und-Organisatorisches/Pruefungstermine/pruefungsplan_ai-b.pdf",
-            "artificial intelligence": "https://www.th-deg.de/Studierende/Antraege-und-Organisatorisches/Pruefungstermine/pruefungsplan_ain-b.pdf",
-            "cyber security": "https://www.th-deg.de/Studierende/Antraege-und-Organisatorisches/Pruefungstermine/pruefungsplan_cy-b.pdf",
-            "interaktive systeme": "https://www.th-deg.de/Studierende/Antraege-und-Organisatorisches/Pruefungstermine/pruefungsplan_ias-b.pdf",
-            "künstliche intelligenz": "https://www.th-deg.de/Studierende/Antraege-und-Organisatorisches/Pruefungstermine/pruefungsplan_ki-b.pdf",
-            "wirtschaftsinformatik": "https://www.th-deg.de/Studierende/Antraege-und-Organisatorisches/Pruefungstermine/pruefungsplan_wi-b.pdf"
-        },
-        "master": {
-            "angewandte informatik": "https://www.th-deg.de/Studierende/Antraege-und-Organisatorisches/Pruefungstermine/pruefungsplan_ai-m.pdf",
-            "artificial intelligence and data science" : "https://www.th-deg.de/Studierende/Antraege-und-Organisatorisches/Pruefungstermine/pruefungsplan_aid-m.pdf",
-            "high performance computing and quantum computing": "https://www.th-deg.de/Studierende/Antraege-und-Organisatorisches/Pruefungstermine/pruefungsplan_hpcqc-m.pdf",
-            "life science informatik": "https://www.th-deg.de/Studierende/Antraege-und-Organisatorisches/Pruefungstermine/pruefungsplan_lsi-m.pdf",
-            "wirtschaftsinformatik": "https://www.th-deg.de/Studierende/Antraege-und-Organisatorisches/Pruefungstermine/pruefungsplan_wi-m.pdf"
-        },
-        "dual": {
-            "cyber security": "https://www.th-deg.de/Studierende/Antraege-und-Organisatorisches/Pruefungstermine/pruefungsplan_cy-m.pdf",
-            "wirtschaftsinformatik": "https://www.th-deg.de/Studierende/Antraege-und-Organisatorisches/Pruefungstermine/pruefungsplan_wi-b-bb.pdf",
-            "wirtschaftsinforamtik - data science" : "https://www.th-deg.de/Studierende/Antraege-und-Organisatorisches/Pruefungstermine/pruefungsplan_wi-b-bb-das.pdf"
-        }
+        "bachelor": [
+            {
+                "name": "Angewandte Informatik/Infotronik",
+                "Link": "<a href='https://www.th-deg.de/Studierende/Antraege-und-Organisatorisches/Pruefungstermine/pruefungsplan_ai-b.pdf'>Hier</a>",
+                "erwaehnungen": [
+                    "angewandt",
+                    "infotronik"
+                ]
+            },
+            {
+                "name": "Artificial Intelligence",
+                "Link": "<a href='https://www.th-deg.de/Studierende/Antraege-und-Organisatorisches/Pruefungstermine/pruefungsplan_ain-b.pdf'>Hier</a>",
+                "erwaehnungen":[
+                    "artificial",
+                    "intelligence",
+                    "data"
+                ]
+            },    
+            {
+                "name": "Cyber Security",
+                "Link": "<a href='https://www.th-deg.de/Studierende/Antraege-und-Organisatorisches/Pruefungstermine/pruefungsplan_cy-b.pdf'>Hier</a>",
+                "erwaehnungen":[
+                    "cyber", 
+                    "security",
+                    "crypto"
+                ]
+            },
+            {
+                "name": "Interaktive Systeme",
+                "Link": "<a href='https://www.th-deg.de/Studierende/Antraege-und-Organisatorisches/Pruefungstermine/pruefungsplan_ias-b.pdf'>Hier</a>",
+                "erwaehnungen": [
+                    "interaktiv"
+                ]
+            },
+            {
+                "name": "Künstliche Intelligenz",
+                "Link": "<a href='https://www.th-deg.de/Studierende/Antraege-und-Organisatorisches/Pruefungstermine/pruefungsplan_ki-b.pdf'>Hier</a>",
+                "erwaehnungen": [
+                    "künstliche",
+                    "intelligenz"
+                ]
+            },
+            {
+                "name": "Wirtschaftsinformatik",
+                "Link":"<a href='https://www.th-deg.de/Studierende/Antraege-und-Organisatorisches/Pruefungstermine/pruefungsplan_wi-b.pdf'>Hier</a>",
+                "erwaehnungen": [
+                    "wirtschaft",
+                    "ökonomie"
+                ]
+            }    
+        ],
+        "master": [
+            {
+                "name": "angewandte informatik",
+                "Link": "<a href='https://www.th-deg.de/Studierende/Antraege-und-Organisatorisches/Pruefungstermine/pruefungsplan_ai-m.pdf'>Hier</a>",
+                "erwaehnungen": [
+                    "angewandte",
+                    "informatik"
+                ]
+            },
+            {
+                "name": "artificial intelligence and data science" ,
+                "Link": "<a href='https://www.th-deg.de/Studierende/Antraege-und-Organisatorisches/Pruefungstermine/pruefungsplan_aid-m.pdf'>Hier</a>",
+                "erwaehnungen": [
+                    "artificial",
+                    "intelligence",
+                    "data"
+                ]
+            },
+            {
+                "name": "high performance computing and quantum computing",
+                "Link": "<a href='https://www.th-deg.de/Studierende/Antraege-und-Organisatorisches/Pruefungstermine/pruefungsplan_hpcqc-m.pdf'>Hier</a>",
+                "erwaehnungen": [
+                    "computing",
+                    "quant",
+                    "heigh performance"
+                ]
+            },
+            {
+                "name": "life science informatik",
+                "Link": "<a href='https://www.th-deg.de/Studierende/Antraege-und-Organisatorisches/Pruefungstermine/pruefungsplan_lsi-m.pdf'>Hier</a>",
+                "erwaehnungen": [
+                    "life"
+                ]
+            },
+            {
+                "name": "wirtschaftsinformatik",
+                "Link": "<a href='https://www.th-deg.de/Studierende/Antraege-und-Organisatorisches/Pruefungstermine/pruefungsplan_wi-m.pdf'>Hier</a>",
+                "erwaehnungen":[
+                    "wirtschaft",
+                    "ökonomie"
+                ]
+            }
+        ],
+        "dual": [
+            {
+                "name": "cyber security",
+                "Link": "<a href='https://www.th-deg.de/Studierende/Antraege-und-Organisatorisches/Pruefungstermine/pruefungsplan_cy-m.pdf'>Hier</a>",
+                "erwaehnungen": [
+                    "cyber",
+                    "security"
+                ]
+            },
+            {
+                "name": "wirtschaftsinformatik",
+                "Link":"<a href='https://www.th-deg.de/Studierende/Antraege-und-Organisatorisches/Pruefungstermine/pruefungsplan_wi-b-bb.pdf'>Hier</a>",
+                "erwaehnungen":[
+                    "wirtschaft",
+                    "ökonomie"
+                ]
+            },
+            {
+                "name":"wirtschaftsinforamtik - data science" ,
+                "Link": "<a href='https://www.th-deg.de/Studierende/Antraege-und-Organisatorisches/Pruefungstermine/pruefungsplan_wi-b-bb-das.pdf'>Hier</a>",
+                "erwaehnungen": [
+                    "data"
+                ]
+            }
+        ]
     }
 }

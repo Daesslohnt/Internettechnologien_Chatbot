@@ -176,13 +176,19 @@ class bot {
       let kursen = mydata.tabella
       for (var ki in kursen){
         if (nachricht.includes(ki)){
-          inhalt = prep_answers.level2 + kursen[ki]
+          inhalt = prep_answers.level2.gefunden + kursen[ki]
           inhalt += prep_answers.goto0
           this.sendMessage(name, inhalt)
           this.level = 0
           return
         }
       }
+      inhalt = prep_answers.level2.nicht_gefunden
+      for (var ki in kursen){
+        inhalt += '<br>' + ki
+      }
+      this.sendMessage(name, inhalt)
+      return
     }
 
 
@@ -221,18 +227,21 @@ class bot {
 
       
       for (var ki in kursen){
-        if (nachricht.includes(ki)){
-          inhalt = prep_answers.level5.gefunden + ki +
-          '<br>' + kursen[ki]
-          inhalt += prep_answers.goto0
-          this.sendMessage(name, inhalt)
-          this.level = 0
-          return
+        let variants = kursen[ki].erwaehnungen
+        for (var kei in variants){
+          if (nachricht.includes(variants[kei])){
+            inhalt = prep_answers.level5.gefunden + kursen[ki].name +
+            '<br>' + kursen[ki].Link
+            inhalt += prep_answers.goto0
+            this.sendMessage(name, inhalt)
+            this.level = 0
+            return
+          }
         }
       }
       inhalt = prep_answers.level5.nicht_gefunden
       for (var ki in kursen){
-        inhalt += '<br>' + ki + '<br>' + kursen[ki]
+        inhalt += '<br>' + kursen[ki].name + '<br>' + kursen[ki].Link
       } 
       this.level = 0
 
