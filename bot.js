@@ -132,6 +132,22 @@ class bot {
         this.sendMessage(name, inhalt)
         return
       }
+      if (nachricht.includes("wissenschaft")){
+        this.level = 4
+        this.personTyp = "wm"
+        
+        inhalt = prep_answers.level1
+        this.sendMessage(name, inhalt)
+        return
+      }
+      if (nachricht.includes("mitarbeiter")){
+        this.level = 4
+        this.personTyp = "mta"
+        
+        inhalt = prep_answers.level1
+        this.sendMessage(name, inhalt)
+        return
+      }
     }
 
     if (this.level == 4){
